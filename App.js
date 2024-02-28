@@ -1,27 +1,22 @@
-import { StyleSheet, View } from "react-native";
-import Custombutton from "./Components/Custombutton";
+import React from "react";
+import { StyleSheet } from "react-native";
+import NameInputScreen from "./Components/NameInputScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import GreetingScreen from "./Components/GreetingScreen";
+import { createStackNavigator } from "@react-navigation/stack";
+
+const Stack = createStackNavigator();
 
 export default function App() {
-
-
-
-  const handlePress =()=>{
-    alert("button clicked");
-  }
   return (
-      // <View style={styles.container}>
-      // <View style={styles.box2} />
-      // <View style={styles.box3} />
-      // <View style={styles.box5} />
-      // <View style={styles.box4} />
-      // </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="NameInput">
+      <Stack.Screen name="Name Input" component={NameInputScreen} />
 
-
-      <View>
-
-<Custombutton  title ="hello harsh"  onPress = {handlePress} />
-
-      </View>
+        
+        <Stack.Screen name="Greeting" component={GreetingScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
@@ -33,27 +28,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "green",
-  },
-
-  box2: {
-    width: 200,
-    height: 100,
-    backgroundColor: "red",
-  },
-
-  box3: {
-    width: 200,
-    height: 100,
-    backgroundColor: "blue",
-  },
-
-  box4: {
-    display: "flex",
-    width: 200,
-    height: 20,
-
-    flex: 67,
-
-    backgroundColor: "white",
   },
 });
