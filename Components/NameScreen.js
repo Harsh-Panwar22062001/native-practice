@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, TextInput, Button, StyleSheet } from "react-native";
 
-export default function NameInputScreen({ navigation }) {
+export default function NameScreen({ navigation }) {
   const [name, setName] = useState('');
 
   const handleNameSubmit = () => {
