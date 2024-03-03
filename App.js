@@ -1,31 +1,21 @@
 import React from "react";
-
-import { NavigationContainer } from "@react-navigation/native";
-import GreetingScreen from "./Components/GreetingScreen";
-import { createStackNavigator } from "@react-navigation/stack";
-import NameScreen from "./Components/NameScreen";
-
-
-const Stack = createStackNavigator();
+import ProfileCard from "./Components/ProfileCard";
+import { StyleSheet, View } from "react-native";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="NameInput">
-      <Stack.Screen name="NameInput" component={NameScreen} />
-<Stack.Screen name="Greeting" component={GreetingScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <View style={styles.container}>
+      <ProfileCard />
+    </View>
   );
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     flexDirection: "column",
-//     backgroundColor: "#fff",
-//     alignItems: "center",
-//     justifyContent: "center",
-
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f0f0f0",
+    padding: 20,
+  },
+});
