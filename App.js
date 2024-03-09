@@ -1,13 +1,15 @@
 import React from "react";
 
 import { StyleSheet, View } from "react-native";
-import OpacityAnimation from "./Components/OpacityAnimation";
+
+import Animated from "./Components/Animated";
+
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <OpacityAnimation />
+     <Animated/>
     </View>
   );
 }
