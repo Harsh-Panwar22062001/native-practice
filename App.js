@@ -1,11 +1,13 @@
 import React from "react";
-import ProfileCard from "./Components/ProfileCard";
+
 import { StyleSheet, View } from "react-native";
+import OpacityAnimation from "./Components/OpacityAnimation";
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <ProfileCard />
+      <OpacityAnimation />
     </View>
   );
 }
