@@ -1,15 +1,17 @@
 import React from "react";
 
 import { StyleSheet, View } from "react-native";
+import Imagestut from "./Components/Imagestut";
 
-import Animated from "./Components/Animated";
+
 
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-     <Animated/>
+    <Imagestut/>
+   
     </View>
   );
 }
