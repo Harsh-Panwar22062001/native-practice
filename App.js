@@ -1,11 +1,12 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import CustomTextInput from "./Components/CustomTextInput";
+import {  StyleSheet, View } from "react-native";
+import FlatItem from './Components/FlatList.jsx'
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <CustomTextInput />
+     <FlatItem/>
     </View>
   );
 }
